@@ -4,19 +4,19 @@ import './index.css';
 const initialFriends = [
   {
     id: 118836,
-    name: "Clark",
+    name: "Fatemeh",
     image: "https://i.pravatar.cc/48?u=118836",
     balance: 0,
   },
   {
     id: 933372,
-    name: "Sarah",
+    name: "Saeed",
     image: "https://i.pravatar.cc/48?u=933372",
     balance: 0,
   },
   {
     id: 499476,
-    name: "Anthony",
+    name: "Mohammad",
     image: "https://i.pravatar.cc/48?u=499476",
     balance: 0,
   },
@@ -100,7 +100,7 @@ function FriendsList({ friends, onSelectFriend, selectedFriend }) {
 
 function Friend({ friend, onSelectFriend, selectedFriend }) {
 
-  const isSelected = selectedFriend?.id == friend.id
+  const isSelected = selectedFriend?.id === friend.id
 
   return <li className={isSelected ? 'selected' : ''}>
     <img src={friend.image} alt={friend.name} />
